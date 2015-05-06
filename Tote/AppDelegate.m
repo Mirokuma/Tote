@@ -20,6 +20,8 @@
     [Parse setApplicationId:@"CTbzNEKZrMYQr0JZhdWInvX3dB7vGSC3TzC9E3WJ"
                   clientKey:@"HKgDcbmx59OZ0zSlD7sC32khaQM5R8uPHMtf0HJj"];
     
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    
     return YES;
 }
 
