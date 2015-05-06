@@ -41,11 +41,11 @@
     self.soiLabel.text = tote.soi;
     self.cargoPhoto.file = tote.imageFile;
     
-    //NSMutableString *etc = [NSMutableString string];
-    //for (NSString* etc in tote.etc) {
-    //    [etc appendFormat:@"%@\n", etc];
-    //}
-    //self.etcTextview.text = etc;
+    NSMutableString *etc = [NSMutableString string];
+    for (NSString* etc in tote.etc) {
+        [etcTextview appendFormat:@"%@\n", etc];
+    }
+    self.etcTextview.text = etc;
     self.Type.text = tote.Type;
     
 }
@@ -56,7 +56,7 @@
     [self setSectionLabel:nil];
     [self setSoiLabel:nil];
     [self setType:nil];
-    [self setSectionLabel:nil];
+    [self setEtcTextview:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
