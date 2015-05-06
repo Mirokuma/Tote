@@ -160,14 +160,7 @@
         DetailViewController *destViewController = segue.destinationViewController;
         
         PFObject *object = [self.objects objectAtIndex:indexPath.row];
-        Tote *tote = [[Tote alloc] init];
-        tote.name = [object objectForKey:@"name"];
-        tote.imageFile = [object objectForKey:@"imageFile"];
-        tote.section = [object objectForKey:@"section"];
-        tote.soi = [object objectForKey:@"soi"];
-        tote.etc = [object objectForKey:@"etc"];
-        tote.Type = [object objectForKey:@"Type"];
-        destViewController.tote = tote;
+        destViewController.tote = [[Tote alloc] initWithPFObject:object];
         
     }
 }

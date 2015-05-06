@@ -493,7 +493,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="bU4-ud-8Po" kind="push" id="fZV-JX-TwH"/>
+                                    <segue destination="bU4-ud-8Po" kind="push" identifier="showDetail" id="fZV-JX-TwH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

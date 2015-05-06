@@ -10,11 +10,17 @@
 
 @implementation Tote
 
-@synthesize name;
-@synthesize section;
-@synthesize soi;
-@synthesize imageFile;
-@synthesize etc;
-@synthesize Type;
+-(id)initWithPFObject:(PFObject *)object
+{
+    if (self = [super init]) {
+        self.name = [object objectForKey:@"name"];
+        self.imageFile = [object objectForKey:@"imageFile"];
+        self.section = [object objectForKey:@"section"];
+        self.soi = [object objectForKey:@"soi"];
+        self.etc = [object objectForKey:@"etc"];
+        self.Type = [object objectForKey:@"Type"];
+    }
+    return self;
+}
 
 @end
