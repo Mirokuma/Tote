@@ -14,7 +14,7 @@
 @interface DetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet PFImageView *cargoPhoto;
 @property (weak, nonatomic) IBOutlet UILabel *N;
-@property (weak, nonatomic) IBOutlet UITextField *etcTextview;
+@property (strong, nonatomic) IBOutlet UITextView *etcTextview;
 @property (weak, nonatomic) IBOutlet UILabel *sectionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *soiLabel;
 @property (weak, nonatomic) IBOutlet UILabel *Type; //tag
