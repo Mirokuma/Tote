@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  FirstViewController.h
 //  Tote Let go
 //
 //  Created by Jittapoo Kongthip on 5/5/2558 BE.
@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+#import <ParseUI/ParseUI.h>
 
 
+@interface FirstViewController : PFQueryTableViewController
+@property (weak, nonatomic) IBOutlet UISearchBar *sBar;
 @end
 

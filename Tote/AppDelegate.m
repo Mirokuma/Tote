@@ -1,22 +1,25 @@
 //
 //  AppDelegate.m
-//  Tote
+//  ToTe
 //
-//  Created by Jittapoo Kongthip on 5/6/2558 BE.
+//  Created by Jittapoo Kongthip on 4/25/2558 BE.
 //  Copyright (c) 2558 Jittapoo Kongthip. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
-@interface AppDelegate ()
-
-@end
 
 @implementation AppDelegate
 
+@synthesize window = _window;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"CTbzNEKZrMYQr0JZhdWInvX3dB7vGSC3TzC9E3WJ"
+                  clientKey:@"HKgDcbmx59OZ0zSlD7sC32khaQM5R8uPHMtf0HJj"];
+    
     return YES;
 }
 
