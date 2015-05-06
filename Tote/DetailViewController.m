@@ -41,11 +41,7 @@
     self.soiLabel.text = tote.soi;
     self.cargoPhoto.file = tote.imageFile;
     
-    NSMutableString *etc = [NSMutableString string];
-    for (NSString* etc in tote.etc) {
-        [etcTextview appendFormat:@"%@\n", etc];
-    }
-    self.etcTextview.text = etc;
+    self.etcTextview.text = [tote.etc componentsJoinedByString:@"\n"];
     self.Type.text = tote.Type;
     
 }
