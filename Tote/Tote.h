@@ -18,4 +18,6 @@
 @property (nonatomic, strong) NSArray *etc; // detail
 @property (nonatomic, strong) NSString *Type; // contact
 
+-(id)initWithPFObject:(PFObject *)object;
+
 @end

@@ -420,7 +420,6 @@
         <!--Update Sample-->
         <scene sceneID="UW4-vX-TWn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9sh-2S-CZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="gE9-TP-f2g" customClass="FirstViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="22" sectionFooterHeight="22" id="mWc-RA-tdv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -494,7 +493,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="bU4-ud-8Po" kind="push" id="fZV-JX-TwH"/>
+                                    <segue destination="bU4-ud-8Po" kind="push" identifier="showDetail" id="fZV-JX-TwH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -520,6 +519,7 @@
                         <outlet property="sBar" destination="CdH-26-Yd5" id="5X5-a1-FfX"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9sh-2S-CZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2907.5" y="-0.5"/>
         </scene>
