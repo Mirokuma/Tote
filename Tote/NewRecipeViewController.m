@@ -25,7 +25,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *sectionTextField;
 @property (weak, nonatomic) IBOutlet UITextField *soiTextField;
-@property (weak, nonatomic) IBOutlet UITextField *detailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *etcTextField;
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
 
 
@@ -50,7 +50,7 @@
     _nameTextField.delegate = self;
     _sectionTextField.delegate = self;
     _soiTextField.delegate = self;
-    _detailTextField.delegate = self;
+    _etcTextField.delegate = self;
     
     
     _pickerData = @[@"กระเป๋า", @"เสื้อผ้า", @"รองเท้า", @"ของแต่งบ้าน", @"5", @"6"];
@@ -125,7 +125,7 @@
     [tote setObject:_sectionTextField.text forKey:@"section"];
     [tote setObject:_soiTextField.text forKey:@"soi"];
     
-    NSArray *detail = [_detailTextField.text componentsSeparatedByString: @","];
+    NSArray *detail = [_etcTextField.text componentsSeparatedByString: @","];
     [tote setObject:detail forKey:@"etc"];
     
     NSInteger row; //tag
@@ -139,7 +139,7 @@
     
     // Recipe image
     NSData *imageData = UIImageJPEGRepresentation(_cargoimageView.image, 0.8);
-    NSString *filename = [NSString stringWithFormat:@"file%@.png", _nameTextField.text];
+    NSString *filename = [NSString stringWithFormat:@"%.0lf-%u",[[NSDate new] timeIntervalSince1970],arc4random()%100000];
     PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
     [tote setObject:imageFile forKey:@"imageFile"];
     
@@ -186,7 +186,7 @@
     [self setNameTextField:nil];
     [self setSectionTextField:nil];
     [self setSoiTextField:nil];
-    [self setDetailTextField:nil];
+    [self setEtcTextField:nil];
     [self setPicker:nil];
     [super viewDidUnload];
 }

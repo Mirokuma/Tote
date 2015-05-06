@@ -15,7 +15,7 @@
 @implementation DetailViewController
 
 @synthesize cargoPhoto;
-@synthesize N;
+@synthesize Nlabel;
 @synthesize sectionLabel;
 @synthesize soiLabel;
 @synthesize etcTextview;
@@ -38,14 +38,14 @@
     
     self.title = tote.name;
     self.sectionLabel.text = tote.section;
+    self.Nlabel.text = tote.name;
     self.soiLabel.text = tote.soi;
     self.cargoPhoto.file = tote.imageFile;
     
-    NSMutableString *etc = [NSMutableString string];
-    for (NSString* etc in tote.etc) {
-        [etcTextview appendFormat:@"%@\n", etc];
+    for (NSArray* etc in tote.etc) {
+        etcTextview.text = [etcTextview.text stringByAppendingFormat:@"%@\n", etc];
     }
-    self.etcTextview.text = etc;
+    self.etcTextview.text = [tote.etc componentsJoinedByString:@"\n"];
     self.Type.text = tote.Type;
     
 }
@@ -53,6 +53,7 @@
 - (void)viewDidUnload
 {
     [self setCargoPhoto:nil];
+    [self setNlabel:nil];
     [self setSectionLabel:nil];
     [self setSoiLabel:nil];
     [self setType:nil];

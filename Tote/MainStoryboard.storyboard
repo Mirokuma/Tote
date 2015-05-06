@@ -31,7 +31,7 @@
         <!--Title-->
         <scene sceneID="e0Y-KX-Lhh">
             <objects>
-                <viewController id="gQQ-5T-QI4" sceneMemberID="viewController">
+                <viewController id="gQQ-5T-QI4" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DhT-tg-aJF"/>
                         <viewControllerLayoutGuide type="bottom" id="lJL-Ke-Ku8"/>
@@ -187,7 +187,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9iK-u4-IOo" id="JdL-2m-ksT">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Add Pho.png" translatesAutoresizingMaskIntoConstraints="NO" id="T5E-Ve-2iy">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add.png" translatesAutoresizingMaskIntoConstraints="NO" id="T5E-Ve-2iy">
                                                     <rect key="frame" x="62" y="8" width="250" height="250"/>
                                                 </imageView>
                                             </subviews>
@@ -205,7 +205,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5g-7m-NNd">
-                                                    <rect key="frame" x="94" y="13" width="270" height="30"/>
+                                                    <rect key="frame" x="97" y="13" width="270" height="30"/>
                                                     <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -224,13 +224,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Soi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kug-dN-r1l">
-                                                    <rect key="frame" x="187" y="16" width="61" height="30"/>
+                                                    <rect key="frame" x="199" y="16" width="31" height="30"/>
                                                     <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wlk-ia-a5t">
-                                                    <rect key="frame" x="94" y="16" width="80" height="30"/>
+                                                    <rect key="frame" x="98" y="16" width="80" height="30"/>
                                                     <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -254,7 +254,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aXN-6A-VuW">
-                                                    <rect key="frame" x="95" y="-49" width="269" height="162"/>
+                                                    <rect key="frame" x="99" y="-48" width="268" height="162"/>
                                                 </pickerView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -302,7 +302,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="cargoimageView" destination="T5E-Ve-2iy" id="uZc-vZ-quQ"/>
-                        <outlet property="detailTextField" destination="Uqb-wd-EnG" id="KJc-tf-q0s"/>
+                        <outlet property="etcTextField" destination="Uqb-wd-EnG" id="8Ea-1c-gKV"/>
                         <outlet property="nameTextField" destination="y5g-7m-NNd" id="dqG-T0-NW1"/>
                         <outlet property="picker" destination="aXN-6A-VuW" id="Uwu-CH-24F"/>
                         <outlet property="sectionTextField" destination="Wlk-ia-a5t" id="V29-0X-Bg0"/>
@@ -326,19 +326,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="43D-8N-zCO" customClass="PFImageView">
-                                <rect key="frame" x="37" y="95" width="300" height="300"/>
+                                <rect key="frame" x="37" y="77" width="300" height="300"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEn-go-cbZ">
-                                <rect key="frame" x="0.0" y="355" width="375" height="40"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53f-4u-I1w">
-                                        <rect key="frame" x="93" y="-147" width="188" height="334"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q12-8y-Jxc">
-                                <rect key="frame" x="28" y="512" width="75" height="24"/>
+                                <rect key="frame" x="28" y="490" width="75" height="24"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -350,37 +341,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="T" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvL-Gh-579">
-                                <rect key="frame" x="129" y="477" width="169" height="21"/>
+                                <rect key="frame" x="129" y="461" width="169" height="21"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Section" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v78-Gl-u1i">
-                                <rect key="frame" x="28" y="439" width="75" height="21"/>
+                                <rect key="frame" x="28" y="432" width="75" height="21"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etG-i6-5fC">
-                                <rect key="frame" x="28" y="477" width="75" height="21"/>
+                                <rect key="frame" x="28" y="461" width="75" height="21"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sec" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oai-Kq-9P8">
-                                <rect key="frame" x="129" y="439" width="45" height="21"/>
+                                <rect key="frame" x="129" y="432" width="45" height="21"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Soi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECi-ee-FWA">
-                                <rect key="frame" x="195" y="439" width="29" height="21"/>
+                                <rect key="frame" x="195" y="432" width="29" height="21"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsc-jM-Y1V">
-                                <rect key="frame" x="244" y="439" width="54" height="21"/>
+                                <rect key="frame" x="244" y="432" width="54" height="21"/>
                                 <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -391,11 +382,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i4H-Ng-jNe">
-                                <rect key="frame" x="28" y="544" width="320" height="30"/>
-                                <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-dw-Kd1">
+                                <rect key="frame" x="28" y="515" width="333" height="172"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -404,10 +396,10 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="N" destination="Vz8-mg-coS" id="q21-Ns-ecI"/>
+                        <outlet property="Nlabel" destination="Vz8-mg-coS" id="BBK-1L-Okn"/>
                         <outlet property="Type" destination="cvL-Gh-579" id="dFv-lm-BiH"/>
                         <outlet property="cargoPhoto" destination="43D-8N-zCO" id="mqY-4U-s2w"/>
-                        <outlet property="etcTextview" destination="i4H-Ng-jNe" id="QmP-2X-w6g"/>
+                        <outlet property="etcTextview" destination="7q6-dw-Kd1" id="7K3-cI-F6v"/>
                         <outlet property="sectionLabel" destination="oai-Kq-9P8" id="bQl-OQ-OUy"/>
                         <outlet property="soiLabel" destination="vsc-jM-Y1V" id="pOu-Uh-TtJ"/>
                     </connections>
@@ -563,8 +555,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Add Pho.png" width="250" height="250"/>
         <image name="add-photo-placeholder.png" width="458" height="250"/>
+        <image name="add.png" width="250" height="250"/>
         <image name="first" width="458" height="250"/>
         <image name="second" width="30" height="30"/>
     </resources>
