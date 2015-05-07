@@ -53,7 +53,7 @@
     _etcTextField.delegate = self;
     
     
-    _pickerData = @[@"กระเป๋า", @"เสื้อผ้า", @"รองเท้า", @"ของแต่งบ้าน", @"5", @"6"];
+    _pickerData = @[@"เครื่องแต่งกาย",@"เครื่องประดับ",@"ฟอร์นิเจอร์และของตกแต่งบ้าน",@"สินค้าหัตถกรรม",@"สัตว์เลี้ยงและอุปกรณ์",@"ต้นไม้และอุปกรณ์สวน",@"สินค้าเบ็ดเตล็ด",@"อาหารและเครื่องดื่ม",@"สินค้า Handmade",@"สินค้ามือสอง"];
     
     
     // Connect data
@@ -82,6 +82,7 @@
 
 // The data to return for the row and component (column) that's being passed in
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+
 {
     return _pickerData[row];
 }
@@ -106,6 +107,8 @@
     
     UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
     mediaUI.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    
     
     // Displays saved pictures from the Camera Roll album.
     mediaUI.mediaTypes = @[(NSString*)kUTTypeImage];
@@ -137,7 +140,7 @@
     [tote setObject:weightSelected forKey:@"Type"];
     
     
-    // Recipe image
+    // image
     NSData *imageData = UIImageJPEGRepresentation(_cargoimageView.image, 0.8);
     NSString *filename = [NSString stringWithFormat:@"%.0lf-%u",[[NSDate new] timeIntervalSince1970],arc4random()%100000];
     PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
@@ -150,7 +153,7 @@
     hud.labelText = @"Uploading";
     [hud show:YES];
     
-    // Upload recipe to Parse
+    // Upload to Parse
     [tote saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         [hud hide:YES];
         
@@ -162,7 +165,7 @@
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Complete" message:@"Successfully saved the cargo" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
             
-            // Notify table view to reload the recipes from Parse cloud
+            // Notify table view to reload from Parse cloud
             [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshTable" object:self];
             
             // Dismiss the controller
